@@ -7,4 +7,4 @@ Simple continuity tester based on Continuity Tester by David Johnson-Davies - ww
 
 # GAPS Workshops
 
-![](photos/MAKE-FRIENDS-NOT-ART_locals.jpg)
+![](laminates/Peepsy_Schematics_screenshot.jpg)
