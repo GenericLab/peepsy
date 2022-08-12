@@ -1,0 +1,9 @@
+Read the fuses
+
+avrdude -P /dev/ttyACM0 -b 19200 -c avrisp -p t85 -U lfuse:r:-:i
+
+Which one to choose?
+
+avrdude: safemode: Fuses OK (E:FE, H:DF, L:E1)
+
+avrdude: safemode: Fuses OK (E:FF, H:DF, L:62)
