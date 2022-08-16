@@ -18,3 +18,5 @@ Read more about the creative PCB design methodology on this wiki: https://www.ha
 
 ## GAPS - Creative PCB-design Workshop, Electronic Wonderland August 2022
 ![](GAPS-ElectricWonderland_2022/GAPS_ElectricWonderland_collage.jpg)
+
+![](GAPS-ElectricWonderland_2022/GAPS_ElectricWonderland_collage.jpg)
