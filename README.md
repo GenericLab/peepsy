@@ -7,10 +7,10 @@ diy-CAD (do-it-yourself Children Aided Design): The core idea of the workshop-ki
 Read more about the creative PCB design methodology on this wiki: https://www.hackteria.org/wiki/Diy-CAD
 
 ## the schematics
-![](laminates/Peepsy_Schematics_screenshot.jpg)
+![](laminates/Peepsy_Schematics_screenshot_04.jpg)
 
 ## the BOM also know as the parts
-![](laminates/Peepsy_Footprints_screenshot.jpg)
+![](laminates/Peepsy_Footprints_screenshot_04.jpg)
 
 # GAPS Workshops
 ## GAPS (GaPiSen) | gambar pisibi-mu sendiri - Creative PCB-design Workshop with Diy-CAD, Lifepatch 30. June 2022
