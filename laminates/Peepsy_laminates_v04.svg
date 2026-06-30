@@ -2810,8 +2810,8 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="0.85696519"
-     inkscape:cx="305.14658"
-     inkscape:cy="567.701"
+     inkscape:cx="225.7968"
+     inkscape:cy="454.51087"
      inkscape:document-units="px"
      inkscape:current-layer="layer1"
      showgrid="false"
@@ -2841,6 +2841,28 @@
      id="layer1"
      transform="translate(0,-308.26772)"
      style="display:inline">
+    <rect
+       y="-729.38275"
+       x="327.17242"
+       height="711.90253"
+       width="524.16974"
+       id="rect5804-0"
+       style="display:inline;fill:#ffffff;stroke:#fffa00;stroke-width:1.49778;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:20;stroke-opacity:1"
+       inkscape:export-xdpi="299.95581"
+       inkscape:export-ydpi="299.95581"
+       transform="rotate(90)"
+       inkscape:export-filename="/home/dusjagr/Documents/SGMK/peepsy_github/laminates/Peepsy_Footprints_screenshot.jpg" />
+    <rect
+       y="-729.38275"
+       x="859.71173"
+       height="711.90253"
+       width="479.65039"
+       id="rect152760"
+       style="display:inline;fill:#ffffff;stroke:#ff00ff;stroke-width:1.49778;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:20;stroke-opacity:1"
+       inkscape:export-xdpi="299.95581"
+       inkscape:export-ydpi="299.95581"
+       transform="rotate(90)"
+       inkscape:export-filename="/home/dusjagr/Documents/SGMK/peepsy_github/laminates/Peepsy_Schematics_screenshot.jpg" />
     <use
        height="100%"
        width="100%"
@@ -2940,16 +2962,6 @@
        y="0"
        x="0"
        style="display:inline" />
-    <rect
-       y="-729.38275"
-       x="327.17242"
-       height="711.90253"
-       width="524.16974"
-       id="rect5804-0"
-       style="display:inline;fill:none;stroke:#fffa00;stroke-width:1.49778;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:20;stroke-opacity:1"
-       inkscape:export-xdpi="299.95581"
-       inkscape:export-ydpi="299.95581"
-       transform="rotate(90)" />
     <g
        id="g119083"
        transform="rotate(90,375.94256,685.16292)">
@@ -14815,16 +14827,6 @@ Aulf15gIQf18yqvl/XMNg8IqQ8sLKP7PcS3/AG+5k2/r5jSRsQqfDHnHy/7gZBn/AH5n/9k=
         </g>
       </g>
     </g>
-    <rect
-       y="-729.38275"
-       x="859.71173"
-       height="711.90253"
-       width="479.65039"
-       id="rect152760"
-       style="display:inline;fill:none;stroke:#ff00ff;stroke-width:1.49778;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:20;stroke-opacity:1"
-       inkscape:export-xdpi="299.95581"
-       inkscape:export-ydpi="299.95581"
-       transform="rotate(90)" />
   </g>
   <g
      inkscape:groupmode="layer"

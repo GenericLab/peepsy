@@ -1,0 +1,880 @@
+
+/home/dusjagr/.cache/arduino/sketches/4F24296712C99C778C0380E6805E70FD/Peepsy-firmware.ino.elf:     file format elf32-avr
+
+
+Disassembly of section .text:
+
+00000000 <__vectors>:
+__vectors():
+   0:	1d c0       	rjmp	.+58     	; 0x3c <__ctors_end>
+   2:	2c c0       	rjmp	.+88     	; 0x5c <__bad_interrupt>
+   4:	ee c0       	rjmp	.+476    	; 0x1e2 <__vector_2>
+   6:	2a c0       	rjmp	.+84     	; 0x5c <__bad_interrupt>
+   8:	29 c0       	rjmp	.+82     	; 0x5c <__bad_interrupt>
+   a:	a1 c0       	rjmp	.+322    	; 0x14e <__vector_5>
+   c:	27 c0       	rjmp	.+78     	; 0x5c <__bad_interrupt>
+   e:	26 c0       	rjmp	.+76     	; 0x5c <__bad_interrupt>
+  10:	25 c0       	rjmp	.+74     	; 0x5c <__bad_interrupt>
+  12:	24 c0       	rjmp	.+72     	; 0x5c <__bad_interrupt>
+  14:	23 c0       	rjmp	.+70     	; 0x5c <__bad_interrupt>
+  16:	22 c0       	rjmp	.+68     	; 0x5c <__bad_interrupt>
+  18:	21 c0       	rjmp	.+66     	; 0x5c <__bad_interrupt>
+  1a:	20 c0       	rjmp	.+64     	; 0x5c <__bad_interrupt>
+  1c:	1f c0       	rjmp	.+62     	; 0x5c <__bad_interrupt>
+
+0000001e <__trampolines_end>:
+__trampolines_start():
+  1e:	00 00       	nop
+  20:	00 00       	nop
+  22:	37 00       	.word	0x0037	; ????
+
+00000024 <port_to_output_PGM>:
+  24:	00 00 00 00 38 00                                   ....8.
+
+0000002a <digital_pin_to_port_PGM>:
+  2a:	02 02 02 02 02 02                                   ......
+
+00000030 <digital_pin_to_bit_mask_PGM>:
+  30:	01 02 04 08 10 20                                   ..... 
+
+00000036 <digital_pin_to_timer_PGM>:
+  36:	01 03 00 00 04 00                                   ......
+
+0000003c <__ctors_end>:
+__dtors_end():
+  3c:	11 24       	eor	r1, r1
+  3e:	1f be       	out	0x3f, r1	; 63
+  40:	cf e5       	ldi	r28, 0x5F	; 95
+  42:	d2 e0       	ldi	r29, 0x02	; 2
+  44:	de bf       	out	0x3e, r29	; 62
+  46:	cd bf       	out	0x3d, r28	; 61
+
+00000048 <__do_clear_bss>:
+__do_clear_bss():
+/home/jenkins/workspace/avr-gcc-staging/label/debian7-x86_64/gcc-build/avr/avr25/libgcc/../../../../gcc/libgcc/config/avr/lib1funcs.S:2441
+  48:	20 e0       	ldi	r18, 0x00	; 0
+/home/jenkins/workspace/avr-gcc-staging/label/debian7-x86_64/gcc-build/avr/avr25/libgcc/../../../../gcc/libgcc/config/avr/lib1funcs.S:2442
+  4a:	a0 e6       	ldi	r26, 0x60	; 96
+/home/jenkins/workspace/avr-gcc-staging/label/debian7-x86_64/gcc-build/avr/avr25/libgcc/../../../../gcc/libgcc/config/avr/lib1funcs.S:2443
+  4c:	b0 e0       	ldi	r27, 0x00	; 0
+/home/jenkins/workspace/avr-gcc-staging/label/debian7-x86_64/gcc-build/avr/avr25/libgcc/../../../../gcc/libgcc/config/avr/lib1funcs.S:2444
+  4e:	01 c0       	rjmp	.+2      	; 0x52 <.do_clear_bss_start>
+
+00000050 <.do_clear_bss_loop>:
+/home/jenkins/workspace/avr-gcc-staging/label/debian7-x86_64/gcc-build/avr/avr25/libgcc/../../../../gcc/libgcc/config/avr/lib1funcs.S:2446
+  50:	1d 92       	st	X+, r1
+
+00000052 <.do_clear_bss_start>:
+/home/jenkins/workspace/avr-gcc-staging/label/debian7-x86_64/gcc-build/avr/avr25/libgcc/../../../../gcc/libgcc/config/avr/lib1funcs.S:2448
+  52:	ad 36       	cpi	r26, 0x6D	; 109
+/home/jenkins/workspace/avr-gcc-staging/label/debian7-x86_64/gcc-build/avr/avr25/libgcc/../../../../gcc/libgcc/config/avr/lib1funcs.S:2449
+  54:	b2 07       	cpc	r27, r18
+/home/jenkins/workspace/avr-gcc-staging/label/debian7-x86_64/gcc-build/avr/avr25/libgcc/../../../../gcc/libgcc/config/avr/lib1funcs.S:2450
+  56:	e1 f7       	brne	.-8      	; 0x50 <.do_clear_bss_loop>
+.do_clear_bss_start():
+  58:	eb d0       	rcall	.+470    	; 0x230 <main>
+  5a:	71 c1       	rjmp	.+738    	; 0x33e <_exit>
+
+0000005c <__bad_interrupt>:
+__vector_1():
+  5c:	d1 cf       	rjmp	.-94     	; 0x0 <__vectors>
+
+0000005e <digitalWrite>:
+digitalWrite():
+/home/dusjagr/.arduino15/packages/ATTinyCore/hardware/avr/1.5.2/cores/tiny/wiring_digital.c:139
+}
+
+void digitalWrite(uint8_t pin, uint8_t val)
+{
+  if (pin&128) {pin=analogInputToDigitalPin((pin&127));}
+  uint8_t timer = digitalPinToTimer(pin);
+  5e:	90 e0       	ldi	r25, 0x00	; 0
+  60:	fc 01       	movw	r30, r24
+  62:	ea 5c       	subi	r30, 0xCA	; 202
+  64:	ff 4f       	sbci	r31, 0xFF	; 255
+  66:	34 91       	lpm	r19, Z
+/home/dusjagr/.arduino15/packages/ATTinyCore/hardware/avr/1.5.2/cores/tiny/wiring_digital.c:140
+  uint8_t bit = digitalPinToBitMask(pin);
+  68:	fc 01       	movw	r30, r24
+  6a:	e0 5d       	subi	r30, 0xD0	; 208
+  6c:	ff 4f       	sbci	r31, 0xFF	; 255
+  6e:	24 91       	lpm	r18, Z
+/home/dusjagr/.arduino15/packages/ATTinyCore/hardware/avr/1.5.2/cores/tiny/wiring_digital.c:141
+  uint8_t port = digitalPinToPort(pin);
+  70:	fc 01       	movw	r30, r24
+  72:	e6 5d       	subi	r30, 0xD6	; 214
+  74:	ff 4f       	sbci	r31, 0xFF	; 255
+  76:	e4 91       	lpm	r30, Z
+/home/dusjagr/.arduino15/packages/ATTinyCore/hardware/avr/1.5.2/cores/tiny/wiring_digital.c:144
+  volatile uint8_t *out;
+
+  if (port == NOT_A_PIN) return;
+  78:	ee 23       	and	r30, r30
+  7a:	b9 f0       	breq	.+46     	; 0xaa <digitalWrite+0x4c>
+/home/dusjagr/.arduino15/packages/ATTinyCore/hardware/avr/1.5.2/cores/tiny/wiring_digital.c:148
+
+  // If the pin that support PWM output, we need to turn it off
+  // before doing a digital write.
+  if (timer != NOT_ON_TIMER) turnOffPWM(timer);
+  7c:	33 23       	and	r19, r19
+  7e:	29 f0       	breq	.+10     	; 0x8a <digitalWrite+0x2c>
+turnOffPWM():
+/home/dusjagr/.arduino15/packages/ATTinyCore/hardware/avr/1.5.2/cores/tiny/wiring_digital.c:67
+}
+
+static void turnOffPWM(uint8_t timer)
+{
+  #if defined(TCCR0A) && defined(COM0A1)
+    if( timer == TIMER0A){
+  80:	31 30       	cpi	r19, 0x01	; 1
+  82:	a1 f4       	brne	.+40     	; 0xac <digitalWrite+0x4e>
+/home/dusjagr/.arduino15/packages/ATTinyCore/hardware/avr/1.5.2/cores/tiny/wiring_digital.c:68
+      cbi(TCCR0A, COM0A1);
+  84:	8a b5       	in	r24, 0x2a	; 42
+  86:	8f 77       	andi	r24, 0x7F	; 127
+/home/dusjagr/.arduino15/packages/ATTinyCore/hardware/avr/1.5.2/cores/tiny/wiring_digital.c:74
+      //cbi(TCCR0A, COM0A0);
+    } else
+  #endif
+  #if defined(TCCR0A) && defined(COM0B1)
+    if( timer == TIMER0B){
+      cbi(TCCR0A, COM0B1);
+  88:	8a bd       	out	0x2a, r24	; 42
+digitalWrite():
+/home/dusjagr/.arduino15/packages/ATTinyCore/hardware/avr/1.5.2/cores/tiny/wiring_digital.c:150
+
+  // If the pin that support PWM output, we need to turn it off
+  // before doing a digital write.
+  if (timer != NOT_ON_TIMER) turnOffPWM(timer);
+
+  out = portOutputRegister(port);
+  8a:	f0 e0       	ldi	r31, 0x00	; 0
+  8c:	ee 0f       	add	r30, r30
+  8e:	ff 1f       	adc	r31, r31
+  90:	ec 5d       	subi	r30, 0xDC	; 220
+  92:	ff 4f       	sbci	r31, 0xFF	; 255
+  94:	a5 91       	lpm	r26, Z+
+  96:	b4 91       	lpm	r27, Z
+/home/dusjagr/.arduino15/packages/ATTinyCore/hardware/avr/1.5.2/cores/tiny/wiring_digital.c:153
+
+  if (val == LOW) {
+    uint8_t oldSREG = SREG;
+  98:	8f b7       	in	r24, 0x3f	; 63
+/home/dusjagr/.arduino15/packages/ATTinyCore/hardware/avr/1.5.2/cores/tiny/wiring_digital.c:152
+  // before doing a digital write.
+  if (timer != NOT_ON_TIMER) turnOffPWM(timer);
+
+  out = portOutputRegister(port);
+
+  if (val == LOW) {
+  9a:	61 11       	cpse	r22, r1
+  9c:	18 c0       	rjmp	.+48     	; 0xce <digitalWrite+0x70>
+/home/dusjagr/.arduino15/packages/ATTinyCore/hardware/avr/1.5.2/cores/tiny/wiring_digital.c:154
+    uint8_t oldSREG = SREG;
+    cli();
+  9e:	f8 94       	cli
+/home/dusjagr/.arduino15/packages/ATTinyCore/hardware/avr/1.5.2/cores/tiny/wiring_digital.c:155
+    *out &= ~bit;
+  a0:	ec 91       	ld	r30, X
+  a2:	20 95       	com	r18
+  a4:	2e 23       	and	r18, r30
+/home/dusjagr/.arduino15/packages/ATTinyCore/hardware/avr/1.5.2/cores/tiny/wiring_digital.c:160
+    SREG = oldSREG;
+  } else {
+    uint8_t oldSREG = SREG;
+    cli();
+    *out |= bit;
+  a6:	2c 93       	st	X, r18
+/home/dusjagr/.arduino15/packages/ATTinyCore/hardware/avr/1.5.2/cores/tiny/wiring_digital.c:161
+    SREG = oldSREG;
+  a8:	8f bf       	out	0x3f, r24	; 63
+/home/dusjagr/.arduino15/packages/ATTinyCore/hardware/avr/1.5.2/cores/tiny/wiring_digital.c:163
+  }
+}
+  aa:	08 95       	ret
+turnOffPWM():
+/home/dusjagr/.arduino15/packages/ATTinyCore/hardware/avr/1.5.2/cores/tiny/wiring_digital.c:73
+      cbi(TCCR0A, COM0A1);
+      //cbi(TCCR0A, COM0A0);
+    } else
+  #endif
+  #if defined(TCCR0A) && defined(COM0B1)
+    if( timer == TIMER0B){
+  ac:	32 30       	cpi	r19, 0x02	; 2
+  ae:	19 f4       	brne	.+6      	; 0xb6 <digitalWrite+0x58>
+/home/dusjagr/.arduino15/packages/ATTinyCore/hardware/avr/1.5.2/cores/tiny/wiring_digital.c:74
+      cbi(TCCR0A, COM0B1);
+  b0:	8a b5       	in	r24, 0x2a	; 42
+  b2:	8f 7d       	andi	r24, 0xDF	; 223
+  b4:	e9 cf       	rjmp	.-46     	; 0x88 <digitalWrite+0x2a>
+/home/dusjagr/.arduino15/packages/ATTinyCore/hardware/avr/1.5.2/cores/tiny/wiring_digital.c:106
+      //cbi(TCCR1C,COM1D0);
+    } else
+  #else
+    // Timer1 for non-x61/x7
+    #if defined(TCCR1) && defined(COM1A1) // x5
+      if(timer == TIMER1A){
+  b6:	33 30       	cpi	r19, 0x03	; 3
+  b8:	21 f4       	brne	.+8      	; 0xc2 <digitalWrite+0x64>
+/home/dusjagr/.arduino15/packages/ATTinyCore/hardware/avr/1.5.2/cores/tiny/wiring_digital.c:107
+        TCCR1 &= ~(1<<COM1A1);
+  ba:	80 b7       	in	r24, 0x30	; 48
+  bc:	8f 7d       	andi	r24, 0xDF	; 223
+  be:	80 bf       	out	0x30, r24	; 48
+  c0:	e4 cf       	rjmp	.-56     	; 0x8a <digitalWrite+0x2c>
+/home/dusjagr/.arduino15/packages/ATTinyCore/hardware/avr/1.5.2/cores/tiny/wiring_digital.c:112
+        //cbi(TCCR1, COM1A0);
+      } else
+    #endif
+    #if defined(TCCR1) && defined(COM1B1) // x5
+      if( timer == TIMER1B){
+  c2:	34 30       	cpi	r19, 0x04	; 4
+  c4:	11 f7       	brne	.-60     	; 0x8a <digitalWrite+0x2c>
+/home/dusjagr/.arduino15/packages/ATTinyCore/hardware/avr/1.5.2/cores/tiny/wiring_digital.c:113
+        GTCCR &= ~(1<<COM1B1);
+  c6:	8c b5       	in	r24, 0x2c	; 44
+  c8:	8f 7d       	andi	r24, 0xDF	; 223
+  ca:	8c bd       	out	0x2c, r24	; 44
+  cc:	de cf       	rjmp	.-68     	; 0x8a <digitalWrite+0x2c>
+digitalWrite():
+/home/dusjagr/.arduino15/packages/ATTinyCore/hardware/avr/1.5.2/cores/tiny/wiring_digital.c:159
+    cli();
+    *out &= ~bit;
+    SREG = oldSREG;
+  } else {
+    uint8_t oldSREG = SREG;
+    cli();
+  ce:	f8 94       	cli
+/home/dusjagr/.arduino15/packages/ATTinyCore/hardware/avr/1.5.2/cores/tiny/wiring_digital.c:160
+    *out |= bit;
+  d0:	ec 91       	ld	r30, X
+  d2:	2e 2b       	or	r18, r30
+  d4:	e8 cf       	rjmp	.-48     	; 0xa6 <digitalWrite+0x48>
+
+000000d6 <pinMode>:
+pinMode():
+/home/dusjagr/.arduino15/packages/ATTinyCore/hardware/avr/1.5.2/cores/tiny/wiring_digital.c:33
+#define ARDUINO_MAIN
+#include "wiring_private.h"
+#include "pins_arduino.h"
+
+void pinMode(uint8_t pin, uint8_t mode)
+{
+  d6:	cf 93       	push	r28
+  d8:	df 93       	push	r29
+/home/dusjagr/.arduino15/packages/ATTinyCore/hardware/avr/1.5.2/cores/tiny/wiring_digital.c:35
+  if (pin&128) {pin=analogInputToDigitalPin((pin&127));}
+  uint8_t bit = digitalPinToBitMask(pin);
+  da:	90 e0       	ldi	r25, 0x00	; 0
+  dc:	fc 01       	movw	r30, r24
+  de:	e0 5d       	subi	r30, 0xD0	; 208
+  e0:	ff 4f       	sbci	r31, 0xFF	; 255
+  e2:	24 91       	lpm	r18, Z
+/home/dusjagr/.arduino15/packages/ATTinyCore/hardware/avr/1.5.2/cores/tiny/wiring_digital.c:36
+  uint8_t port = digitalPinToPort(pin);
+  e4:	86 5d       	subi	r24, 0xD6	; 214
+  e6:	9f 4f       	sbci	r25, 0xFF	; 255
+  e8:	fc 01       	movw	r30, r24
+  ea:	84 91       	lpm	r24, Z
+/home/dusjagr/.arduino15/packages/ATTinyCore/hardware/avr/1.5.2/cores/tiny/wiring_digital.c:39
+  volatile uint8_t *reg, *out;
+
+  if (port == NOT_A_PIN) return;
+  ec:	88 23       	and	r24, r24
+  ee:	c9 f0       	breq	.+50     	; 0x122 <pinMode+0x4c>
+/home/dusjagr/.arduino15/packages/ATTinyCore/hardware/avr/1.5.2/cores/tiny/wiring_digital.c:41
+
+  reg = portModeRegister(port);
+  f0:	90 e0       	ldi	r25, 0x00	; 0
+  f2:	88 0f       	add	r24, r24
+  f4:	99 1f       	adc	r25, r25
+  f6:	fc 01       	movw	r30, r24
+  f8:	e2 5e       	subi	r30, 0xE2	; 226
+  fa:	ff 4f       	sbci	r31, 0xFF	; 255
+  fc:	a5 91       	lpm	r26, Z+
+  fe:	b4 91       	lpm	r27, Z
+/home/dusjagr/.arduino15/packages/ATTinyCore/hardware/avr/1.5.2/cores/tiny/wiring_digital.c:42
+  out = portOutputRegister(port);
+ 100:	fc 01       	movw	r30, r24
+ 102:	ec 5d       	subi	r30, 0xDC	; 220
+ 104:	ff 4f       	sbci	r31, 0xFF	; 255
+ 106:	c5 91       	lpm	r28, Z+
+ 108:	d4 91       	lpm	r29, Z
+/home/dusjagr/.arduino15/packages/ATTinyCore/hardware/avr/1.5.2/cores/tiny/wiring_digital.c:44
+
+  if (mode == INPUT) {
+ 10a:	61 11       	cpse	r22, r1
+ 10c:	0d c0       	rjmp	.+26     	; 0x128 <pinMode+0x52>
+/home/dusjagr/.arduino15/packages/ATTinyCore/hardware/avr/1.5.2/cores/tiny/wiring_digital.c:45
+    uint8_t oldSREG = SREG;
+ 10e:	9f b7       	in	r25, 0x3f	; 63
+/home/dusjagr/.arduino15/packages/ATTinyCore/hardware/avr/1.5.2/cores/tiny/wiring_digital.c:46
+                cli();
+ 110:	f8 94       	cli
+/home/dusjagr/.arduino15/packages/ATTinyCore/hardware/avr/1.5.2/cores/tiny/wiring_digital.c:47
+    *reg &= ~bit;
+ 112:	8c 91       	ld	r24, X
+ 114:	20 95       	com	r18
+ 116:	82 23       	and	r24, r18
+ 118:	8c 93       	st	X, r24
+/home/dusjagr/.arduino15/packages/ATTinyCore/hardware/avr/1.5.2/cores/tiny/wiring_digital.c:48
+    *out &= ~bit;
+ 11a:	88 81       	ld	r24, Y
+ 11c:	28 23       	and	r18, r24
+/home/dusjagr/.arduino15/packages/ATTinyCore/hardware/avr/1.5.2/cores/tiny/wiring_digital.c:54
+    SREG = oldSREG;
+  } else if (mode == INPUT_PULLUP) {
+    uint8_t oldSREG = SREG;
+                cli();
+    *reg &= ~bit;
+    *out |= bit;
+ 11e:	28 83       	st	Y, r18
+/home/dusjagr/.arduino15/packages/ATTinyCore/hardware/avr/1.5.2/cores/tiny/wiring_digital.c:55
+    SREG = oldSREG;
+ 120:	9f bf       	out	0x3f, r25	; 63
+/home/dusjagr/.arduino15/packages/ATTinyCore/hardware/avr/1.5.2/cores/tiny/wiring_digital.c:62
+    uint8_t oldSREG = SREG;
+                cli();
+    *reg |= bit;
+    SREG = oldSREG;
+  }
+}
+ 122:	df 91       	pop	r29
+ 124:	cf 91       	pop	r28
+ 126:	08 95       	ret
+/home/dusjagr/.arduino15/packages/ATTinyCore/hardware/avr/1.5.2/cores/tiny/wiring_digital.c:50
+    uint8_t oldSREG = SREG;
+                cli();
+    *reg &= ~bit;
+    *out &= ~bit;
+    SREG = oldSREG;
+  } else if (mode == INPUT_PULLUP) {
+ 128:	62 30       	cpi	r22, 0x02	; 2
+ 12a:	51 f4       	brne	.+20     	; 0x140 <pinMode+0x6a>
+/home/dusjagr/.arduino15/packages/ATTinyCore/hardware/avr/1.5.2/cores/tiny/wiring_digital.c:51
+    uint8_t oldSREG = SREG;
+ 12c:	9f b7       	in	r25, 0x3f	; 63
+/home/dusjagr/.arduino15/packages/ATTinyCore/hardware/avr/1.5.2/cores/tiny/wiring_digital.c:52
+                cli();
+ 12e:	f8 94       	cli
+/home/dusjagr/.arduino15/packages/ATTinyCore/hardware/avr/1.5.2/cores/tiny/wiring_digital.c:53
+    *reg &= ~bit;
+ 130:	3c 91       	ld	r19, X
+ 132:	82 2f       	mov	r24, r18
+ 134:	80 95       	com	r24
+ 136:	83 23       	and	r24, r19
+ 138:	8c 93       	st	X, r24
+/home/dusjagr/.arduino15/packages/ATTinyCore/hardware/avr/1.5.2/cores/tiny/wiring_digital.c:54
+    *out |= bit;
+ 13a:	e8 81       	ld	r30, Y
+ 13c:	2e 2b       	or	r18, r30
+ 13e:	ef cf       	rjmp	.-34     	; 0x11e <pinMode+0x48>
+/home/dusjagr/.arduino15/packages/ATTinyCore/hardware/avr/1.5.2/cores/tiny/wiring_digital.c:57
+    SREG = oldSREG;
+  } else {
+    uint8_t oldSREG = SREG;
+ 140:	8f b7       	in	r24, 0x3f	; 63
+/home/dusjagr/.arduino15/packages/ATTinyCore/hardware/avr/1.5.2/cores/tiny/wiring_digital.c:58
+                cli();
+ 142:	f8 94       	cli
+/home/dusjagr/.arduino15/packages/ATTinyCore/hardware/avr/1.5.2/cores/tiny/wiring_digital.c:59
+    *reg |= bit;
+ 144:	ec 91       	ld	r30, X
+ 146:	2e 2b       	or	r18, r30
+ 148:	2c 93       	st	X, r18
+/home/dusjagr/.arduino15/packages/ATTinyCore/hardware/avr/1.5.2/cores/tiny/wiring_digital.c:60
+    SREG = oldSREG;
+ 14a:	8f bf       	out	0x3f, r24	; 63
+ 14c:	ea cf       	rjmp	.-44     	; 0x122 <pinMode+0x4c>
+
+0000014e <__vector_5>:
+__vector_5():
+/home/dusjagr/.arduino15/packages/ATTinyCore/hardware/avr/1.5.2/cores/tiny/wiring.c:308
+      #error "cannot find Millis() timer overflow vector"
+    #endif
+  #else
+    #error "Millis() timer not defined!"
+  #endif
+  {
+ 14e:	1f 92       	push	r1
+ 150:	0f 92       	push	r0
+ 152:	0f b6       	in	r0, 0x3f	; 63
+ 154:	0f 92       	push	r0
+ 156:	11 24       	eor	r1, r1
+ 158:	2f 93       	push	r18
+ 15a:	3f 93       	push	r19
+ 15c:	8f 93       	push	r24
+ 15e:	9f 93       	push	r25
+ 160:	af 93       	push	r26
+ 162:	bf 93       	push	r27
+/home/dusjagr/.arduino15/packages/ATTinyCore/hardware/avr/1.5.2/cores/tiny/wiring.c:311
+    // copy these to local variables so they can be stored in registers
+    // (volatile variables must be read from memory on every access)
+    unsigned long m = millis_timer_millis;
+ 164:	80 91 69 00 	lds	r24, 0x0069	; 0x800069 <millis_timer_millis>
+ 168:	90 91 6a 00 	lds	r25, 0x006A	; 0x80006a <millis_timer_millis+0x1>
+ 16c:	a0 91 6b 00 	lds	r26, 0x006B	; 0x80006b <millis_timer_millis+0x2>
+ 170:	b0 91 6c 00 	lds	r27, 0x006C	; 0x80006c <millis_timer_millis+0x3>
+/home/dusjagr/.arduino15/packages/ATTinyCore/hardware/avr/1.5.2/cores/tiny/wiring.c:312
+    unsigned char f = millis_timer_fract;
+ 174:	30 91 68 00 	lds	r19, 0x0068	; 0x800068 <millis_timer_fract>
+/home/dusjagr/.arduino15/packages/ATTinyCore/hardware/avr/1.5.2/cores/tiny/wiring.c:319
+    static unsigned char correct_exact = 0;     // rollover intended
+    if (++correct_exact < CORRECT_EXACT_MANY) {
+      ++f;
+    }
+#endif
+    f += FRACT_INC;
+ 178:	26 e0       	ldi	r18, 0x06	; 6
+ 17a:	23 0f       	add	r18, r19
+/home/dusjagr/.arduino15/packages/ATTinyCore/hardware/avr/1.5.2/cores/tiny/wiring.c:321
+
+    if (f >= FRACT_MAX)
+ 17c:	2d 37       	cpi	r18, 0x7D	; 125
+ 17e:	68 f1       	brcs	.+90     	; 0x1da <__vector_5+0x8c>
+/home/dusjagr/.arduino15/packages/ATTinyCore/hardware/avr/1.5.2/cores/tiny/wiring.c:323
+    {
+      f -= FRACT_MAX;
+ 180:	29 e8       	ldi	r18, 0x89	; 137
+ 182:	23 0f       	add	r18, r19
+/home/dusjagr/.arduino15/packages/ATTinyCore/hardware/avr/1.5.2/cores/tiny/wiring.c:324
+      m += MILLIS_INC + 1;
+ 184:	03 96       	adiw	r24, 0x03	; 3
+ 186:	a1 1d       	adc	r26, r1
+ 188:	b1 1d       	adc	r27, r1
+/home/dusjagr/.arduino15/packages/ATTinyCore/hardware/avr/1.5.2/cores/tiny/wiring.c:331
+    else
+    {
+      m += MILLIS_INC;
+    }
+
+    millis_timer_fract = f;
+ 18a:	20 93 68 00 	sts	0x0068, r18	; 0x800068 <millis_timer_fract>
+/home/dusjagr/.arduino15/packages/ATTinyCore/hardware/avr/1.5.2/cores/tiny/wiring.c:332
+    millis_timer_millis = m;
+ 18e:	80 93 69 00 	sts	0x0069, r24	; 0x800069 <millis_timer_millis>
+ 192:	90 93 6a 00 	sts	0x006A, r25	; 0x80006a <millis_timer_millis+0x1>
+ 196:	a0 93 6b 00 	sts	0x006B, r26	; 0x80006b <millis_timer_millis+0x2>
+ 19a:	b0 93 6c 00 	sts	0x006C, r27	; 0x80006c <millis_timer_millis+0x3>
+/home/dusjagr/.arduino15/packages/ATTinyCore/hardware/avr/1.5.2/cores/tiny/wiring.c:334
+#ifndef CORRECT_EXACT_MICROS
+    millis_timer_overflow_count++;
+ 19e:	80 91 64 00 	lds	r24, 0x0064	; 0x800064 <millis_timer_overflow_count>
+ 1a2:	90 91 65 00 	lds	r25, 0x0065	; 0x800065 <millis_timer_overflow_count+0x1>
+ 1a6:	a0 91 66 00 	lds	r26, 0x0066	; 0x800066 <millis_timer_overflow_count+0x2>
+ 1aa:	b0 91 67 00 	lds	r27, 0x0067	; 0x800067 <millis_timer_overflow_count+0x3>
+ 1ae:	01 96       	adiw	r24, 0x01	; 1
+ 1b0:	a1 1d       	adc	r26, r1
+ 1b2:	b1 1d       	adc	r27, r1
+ 1b4:	80 93 64 00 	sts	0x0064, r24	; 0x800064 <millis_timer_overflow_count>
+ 1b8:	90 93 65 00 	sts	0x0065, r25	; 0x800065 <millis_timer_overflow_count+0x1>
+ 1bc:	a0 93 66 00 	sts	0x0066, r26	; 0x800066 <millis_timer_overflow_count+0x2>
+ 1c0:	b0 93 67 00 	sts	0x0067, r27	; 0x800067 <millis_timer_overflow_count+0x3>
+/home/dusjagr/.arduino15/packages/ATTinyCore/hardware/avr/1.5.2/cores/tiny/wiring.c:336
+#endif
+  }
+ 1c4:	bf 91       	pop	r27
+ 1c6:	af 91       	pop	r26
+ 1c8:	9f 91       	pop	r25
+ 1ca:	8f 91       	pop	r24
+ 1cc:	3f 91       	pop	r19
+ 1ce:	2f 91       	pop	r18
+ 1d0:	0f 90       	pop	r0
+ 1d2:	0f be       	out	0x3f, r0	; 63
+ 1d4:	0f 90       	pop	r0
+ 1d6:	1f 90       	pop	r1
+ 1d8:	18 95       	reti
+/home/dusjagr/.arduino15/packages/ATTinyCore/hardware/avr/1.5.2/cores/tiny/wiring.c:328
+      f -= FRACT_MAX;
+      m += MILLIS_INC + 1;
+    }
+    else
+    {
+      m += MILLIS_INC;
+ 1da:	02 96       	adiw	r24, 0x02	; 2
+ 1dc:	a1 1d       	adc	r26, r1
+ 1de:	b1 1d       	adc	r27, r1
+ 1e0:	d4 cf       	rjmp	.-88     	; 0x18a <__vector_5+0x3c>
+
+000001e2 <__vector_2>:
+__vector_2():
+/home/dusjagr/Documents/SGMK/peepsy-master/Peepsy-firmware/Peepsy-firmware.ino:31
+const unsigned long		Timeout = (unsigned long)60*1000; // One minute
+volatile unsigned long	Time;
+
+// ----------------------------------------------------------------------------------------
+// Pin change interrupt service routine - resets sleep timer
+ISR (PCINT0_vect) {
+ 1e2:	1f 92       	push	r1
+ 1e4:	0f 92       	push	r0
+ 1e6:	0f b6       	in	r0, 0x3f	; 63
+ 1e8:	0f 92       	push	r0
+ 1ea:	11 24       	eor	r1, r1
+ 1ec:	2f 93       	push	r18
+ 1ee:	8f 93       	push	r24
+ 1f0:	9f 93       	push	r25
+ 1f2:	af 93       	push	r26
+ 1f4:	bf 93       	push	r27
+millis():
+/home/dusjagr/.arduino15/packages/ATTinyCore/hardware/avr/1.5.2/cores/tiny/wiring.c:341
+  }
+
+  unsigned long millis()
+  {
+    unsigned long m;
+    uint8_t oldSREG = SREG;
+ 1f6:	2f b7       	in	r18, 0x3f	; 63
+/home/dusjagr/.arduino15/packages/ATTinyCore/hardware/avr/1.5.2/cores/tiny/wiring.c:345
+
+    // disable interrupts while we read millis_timer_millis or we might get an
+    // inconsistent value (e.g. in the middle of a write to millis_timer_millis)
+    cli();
+ 1f8:	f8 94       	cli
+/home/dusjagr/.arduino15/packages/ATTinyCore/hardware/avr/1.5.2/cores/tiny/wiring.c:346
+    m = millis_timer_millis;
+ 1fa:	80 91 69 00 	lds	r24, 0x0069	; 0x800069 <millis_timer_millis>
+ 1fe:	90 91 6a 00 	lds	r25, 0x006A	; 0x80006a <millis_timer_millis+0x1>
+ 202:	a0 91 6b 00 	lds	r26, 0x006B	; 0x80006b <millis_timer_millis+0x2>
+ 206:	b0 91 6c 00 	lds	r27, 0x006C	; 0x80006c <millis_timer_millis+0x3>
+/home/dusjagr/.arduino15/packages/ATTinyCore/hardware/avr/1.5.2/cores/tiny/wiring.c:347
+    SREG = oldSREG;
+ 20a:	2f bf       	out	0x3f, r18	; 63
+__vector_2():
+/home/dusjagr/Documents/SGMK/peepsy-master/Peepsy-firmware/Peepsy-firmware.ino:32
+	Time = millis();
+ 20c:	80 93 60 00 	sts	0x0060, r24	; 0x800060 <__DATA_REGION_ORIGIN__>
+ 210:	90 93 61 00 	sts	0x0061, r25	; 0x800061 <__DATA_REGION_ORIGIN__+0x1>
+ 214:	a0 93 62 00 	sts	0x0062, r26	; 0x800062 <__DATA_REGION_ORIGIN__+0x2>
+ 218:	b0 93 63 00 	sts	0x0063, r27	; 0x800063 <__DATA_REGION_ORIGIN__+0x3>
+/home/dusjagr/Documents/SGMK/peepsy-master/Peepsy-firmware/Peepsy-firmware.ino:33
+}
+ 21c:	bf 91       	pop	r27
+ 21e:	af 91       	pop	r26
+ 220:	9f 91       	pop	r25
+ 222:	8f 91       	pop	r24
+ 224:	2f 91       	pop	r18
+ 226:	0f 90       	pop	r0
+ 228:	0f be       	out	0x3f, r0	; 63
+ 22a:	0f 90       	pop	r0
+ 22c:	1f 90       	pop	r1
+ 22e:	18 95       	reti
+
+00000230 <main>:
+main():
+/home/dusjagr/.arduino15/packages/ATTinyCore/hardware/avr/1.5.2/cores/tiny/wiring.c:1138
+*/
+
+  // Use the Millis Timer for fast PWM (unless it doesn't have an output).
+  #if (TIMER_TO_USE_FOR_MILLIS == 0)
+    #if defined(WGM01) // if Timer0 has PWM
+      TCCR0A = (1<<WGM01) | (1<<WGM00);
+ 230:	c3 e0       	ldi	r28, 0x03	; 3
+ 232:	ca bd       	out	0x2a, r28	; 42
+/home/dusjagr/.arduino15/packages/ATTinyCore/hardware/avr/1.5.2/cores/tiny/wiring.c:1141
+    #endif
+    #if defined(TCCR0B) //The x61 has a wacky Timer0!
+      TCCR0B = (MillisTimer_Prescale_Index << CS00);
+ 234:	d2 e0       	ldi	r29, 0x02	; 2
+ 236:	d3 bf       	out	0x33, r29	; 51
+/home/dusjagr/.arduino15/packages/ATTinyCore/hardware/avr/1.5.2/cores/tiny/wiring.c:1162
+    TCCR1A = 1<<WGM10;
+    TCCR1B = (1<<WGM12) | (MillisTimer_Prescale_Index << CS10);
+  #endif
+
+  // this needs to be called before setup() or some functions won't work there
+  sei();
+ 238:	78 94       	sei
+/home/dusjagr/.arduino15/packages/ATTinyCore/hardware/avr/1.5.2/cores/tiny/wiring.c:1167
+
+  #ifndef DISABLEMILLIS
+    // Enable the overflow interrupt (this is the basic system tic-toc for millis)
+    #if defined(TIMSK) && defined(TOIE0) && (TIMER_TO_USE_FOR_MILLIS == 0)
+      sbi(TIMSK, TOIE0);
+ 23a:	89 b7       	in	r24, 0x39	; 57
+ 23c:	82 60       	ori	r24, 0x02	; 2
+ 23e:	89 bf       	out	0x39, r24	; 57
+initToneTimerInternal():
+/home/dusjagr/.arduino15/packages/ATTinyCore/hardware/avr/1.5.2/cores/tiny/wiring.c:958
+    #elif defined(__AVR_ATtiny43__)
+      TCCR1A = 3; //WGM 10=1, WGM11=1
+      TCCR1B = 3; //prescaler of 64
+    #elif (TIMER_TO_USE_FOR_TONE == 1) && defined(TCCR1) // ATtiny x5
+      // Use the Tone Timer for fast PWM as phase correct not supported by this timer
+      GTCCR = (1<<PWM1B);
+ 240:	80 e4       	ldi	r24, 0x40	; 64
+ 242:	8c bd       	out	0x2c, r24	; 44
+/home/dusjagr/.arduino15/packages/ATTinyCore/hardware/avr/1.5.2/cores/tiny/wiring.c:959
+      OCR1C = 0xFF; //Use 255 as the top to match with the others as this module doesn't have a 8bit PWM mode.
+ 244:	8f ef       	ldi	r24, 0xFF	; 255
+ 246:	8d bd       	out	0x2d, r24	; 45
+/home/dusjagr/.arduino15/packages/ATTinyCore/hardware/avr/1.5.2/cores/tiny/wiring.c:960
+      TCCR1 = (1<<CTC1) | (1<<PWM1A) | (ToneTimer_Prescale_Index << CS10);
+ 248:	84 ec       	ldi	r24, 0xC4	; 196
+ 24a:	80 bf       	out	0x30, r24	; 48
+main():
+/home/dusjagr/.arduino15/packages/ATTinyCore/hardware/avr/1.5.2/cores/tiny/wiring.c:1214
+  #if defined( INITIALIZE_ANALOG_TO_DIGITAL_CONVERTER ) && INITIALIZE_ANALOG_TO_DIGITAL_CONVERTER
+    #if defined(ADCSRA)
+      // set a2d prescale factor
+      // ADCSRA = (ADCSRA & ~((1<<ADPS2)|(1<<ADPS1)|(1<<ADPS0))) | (ADC_ARDUINO_PRESCALER << ADPS0) | (1<<ADEN);
+      // dude, this is being called on startup. We know that ADCSRA is 0! Why add a RMW cycle?!
+      ADCSRA = (ADC_ARDUINO_PRESCALER << ADPS0) | (1<<ADEN);
+ 24c:	83 e8       	ldi	r24, 0x83	; 131
+ 24e:	86 b9       	out	0x06, r24	; 6
+setup():
+/home/dusjagr/Documents/SGMK/peepsy-master/Peepsy-firmware/Peepsy-firmware.ino:50
+}
+
+
+// ----------------------------------------------------------------------------------------
+void setup () {
+	pinMode(Pin_Reference,	INPUT_PULLUP);
+ 250:	62 e0       	ldi	r22, 0x02	; 2
+ 252:	80 e0       	ldi	r24, 0x00	; 0
+ 254:	40 df       	rcall	.-384    	; 0xd6 <pinMode>
+/home/dusjagr/Documents/SGMK/peepsy-master/Peepsy-firmware/Peepsy-firmware.ino:51
+	pinMode(Pin_Probe,		INPUT_PULLUP);
+ 256:	62 e0       	ldi	r22, 0x02	; 2
+ 258:	81 e0       	ldi	r24, 0x01	; 1
+ 25a:	3d df       	rcall	.-390    	; 0xd6 <pinMode>
+/home/dusjagr/Documents/SGMK/peepsy-master/Peepsy-firmware/Peepsy-firmware.ino:52
+	pinMode(Pin_Led_Sense,	OUTPUT);
+ 25c:	61 e0       	ldi	r22, 0x01	; 1
+ 25e:	82 e0       	ldi	r24, 0x02	; 2
+ 260:	3a df       	rcall	.-396    	; 0xd6 <pinMode>
+/home/dusjagr/Documents/SGMK/peepsy-master/Peepsy-firmware/Peepsy-firmware.ino:53
+	pinMode(Pin_Led_Wake,	OUTPUT);
+ 262:	61 e0       	ldi	r22, 0x01	; 1
+ 264:	85 e0       	ldi	r24, 0x05	; 5
+ 266:	37 df       	rcall	.-402    	; 0xd6 <pinMode>
+/home/dusjagr/Documents/SGMK/peepsy-master/Peepsy-firmware/Peepsy-firmware.ino:54
+	pinMode(Pin_Speaker_A,	OUTPUT);
+ 268:	61 e0       	ldi	r22, 0x01	; 1
+ 26a:	84 e0       	ldi	r24, 0x04	; 4
+ 26c:	34 df       	rcall	.-408    	; 0xd6 <pinMode>
+/home/dusjagr/Documents/SGMK/peepsy-master/Peepsy-firmware/Peepsy-firmware.ino:55
+	pinMode(Pin_Speaker_B,	OUTPUT);
+ 26e:	61 e0       	ldi	r22, 0x01	; 1
+ 270:	83 e0       	ldi	r24, 0x03	; 3
+ 272:	31 df       	rcall	.-414    	; 0xd6 <pinMode>
+/home/dusjagr/Documents/SGMK/peepsy-master/Peepsy-firmware/Peepsy-firmware.ino:58
+	
+ 	 // Setup beep
+ 	TCCR1 = 1 << CTC1 | 0 << COM1A0 | 0 << CS10;  			// CTC mode, counter stopped
+ 274:	80 e8       	ldi	r24, 0x80	; 128
+ 276:	80 bf       	out	0x30, r24	; 48
+/home/dusjagr/Documents/SGMK/peepsy-master/Peepsy-firmware/Peepsy-firmware.ino:59
+	GTCCR = 1 << COM1B0;									// Toggle OC1B (PB4 and PB3 in PM Mode )
+ 278:	80 e1       	ldi	r24, 0x10	; 16
+ 27a:	8c bd       	out	0x2c, r24	; 44
+/home/dusjagr/Documents/SGMK/peepsy-master/Peepsy-firmware/Peepsy-firmware.ino:60
+	GTCCR |= 1 << PWM1B;									// PWM Mode
+ 27c:	8c b5       	in	r24, 0x2c	; 44
+ 27e:	80 64       	ori	r24, 0x40	; 64
+ 280:	8c bd       	out	0x2c, r24	; 44
+/home/dusjagr/Documents/SGMK/peepsy-master/Peepsy-firmware/Peepsy-firmware.ino:61
+	OCR1C = 238;											// Plays 1042Hz (C6)
+ 282:	8e ee       	ldi	r24, 0xEE	; 238
+ 284:	8d bd       	out	0x2d, r24	; 45
+/home/dusjagr/Documents/SGMK/peepsy-master/Peepsy-firmware/Peepsy-firmware.ino:62
+	OCR1B = 119;											// at duty cycle 50
+ 286:	87 e7       	ldi	r24, 0x77	; 119
+ 288:	8b bd       	out	0x2b, r24	; 43
+/home/dusjagr/Documents/SGMK/peepsy-master/Peepsy-firmware/Peepsy-firmware.ino:66
+
+	
+	//Pin-change interrupt
+	PCMSK = 1 << Pin_Probe;									// Pin change interrupt on Pin_Probe
+ 28a:	d5 bb       	out	0x15, r29	; 21
+/home/dusjagr/Documents/SGMK/peepsy-master/Peepsy-firmware/Peepsy-firmware.ino:67
+	GIMSK = GIMSK | 1 << PCIE;								// Enable pin-change interrupt
+ 28c:	8b b7       	in	r24, 0x3b	; 59
+ 28e:	80 62       	ori	r24, 0x20	; 32
+ 290:	8b bf       	out	0x3b, r24	; 59
+/home/dusjagr/Documents/SGMK/peepsy-master/Peepsy-firmware/Peepsy-firmware.ino:70
+	
+	// Power saving
+	ADCSRA &= ~(1 << ADEN);									// Disable ADC to save power
+ 292:	37 98       	cbi	0x06, 7	; 6
+/home/dusjagr/Documents/SGMK/peepsy-master/Peepsy-firmware/Peepsy-firmware.ino:71
+	PRR = 1 << PRUSI | 1 << PRADC;							// Turn off unused clocks
+ 294:	c0 bd       	out	0x20, r28	; 32
+/home/dusjagr/Documents/SGMK/peepsy-master/Peepsy-firmware/Peepsy-firmware.ino:72
+	set_sleep_mode(SLEEP_MODE_PWR_DOWN);
+ 296:	85 b7       	in	r24, 0x35	; 53
+ 298:	87 7e       	andi	r24, 0xE7	; 231
+ 29a:	80 61       	ori	r24, 0x10	; 16
+ 29c:	85 bf       	out	0x35, r24	; 53
+millis():
+/home/dusjagr/.arduino15/packages/ATTinyCore/hardware/avr/1.5.2/cores/tiny/wiring.c:341
+  }
+
+  unsigned long millis()
+  {
+    unsigned long m;
+    uint8_t oldSREG = SREG;
+ 29e:	2f b7       	in	r18, 0x3f	; 63
+/home/dusjagr/.arduino15/packages/ATTinyCore/hardware/avr/1.5.2/cores/tiny/wiring.c:345
+
+    // disable interrupts while we read millis_timer_millis or we might get an
+    // inconsistent value (e.g. in the middle of a write to millis_timer_millis)
+    cli();
+ 2a0:	f8 94       	cli
+/home/dusjagr/.arduino15/packages/ATTinyCore/hardware/avr/1.5.2/cores/tiny/wiring.c:346
+    m = millis_timer_millis;
+ 2a2:	80 91 69 00 	lds	r24, 0x0069	; 0x800069 <millis_timer_millis>
+ 2a6:	90 91 6a 00 	lds	r25, 0x006A	; 0x80006a <millis_timer_millis+0x1>
+ 2aa:	a0 91 6b 00 	lds	r26, 0x006B	; 0x80006b <millis_timer_millis+0x2>
+ 2ae:	b0 91 6c 00 	lds	r27, 0x006C	; 0x80006c <millis_timer_millis+0x3>
+/home/dusjagr/.arduino15/packages/ATTinyCore/hardware/avr/1.5.2/cores/tiny/wiring.c:347
+    SREG = oldSREG;
+ 2b2:	2f bf       	out	0x3f, r18	; 63
+setup():
+/home/dusjagr/Documents/SGMK/peepsy-master/Peepsy-firmware/Peepsy-firmware.ino:76
+	
+	// Start running
+	//digitalWrite(Pin_Led_Wake, HIGH);
+	Time = millis();
+ 2b4:	80 93 60 00 	sts	0x0060, r24	; 0x800060 <__DATA_REGION_ORIGIN__>
+ 2b8:	90 93 61 00 	sts	0x0061, r25	; 0x800061 <__DATA_REGION_ORIGIN__+0x1>
+ 2bc:	a0 93 62 00 	sts	0x0062, r26	; 0x800062 <__DATA_REGION_ORIGIN__+0x2>
+ 2c0:	b0 93 63 00 	sts	0x0063, r27	; 0x800063 <__DATA_REGION_ORIGIN__+0x3>
+loop():
+/home/dusjagr/Documents/SGMK/peepsy-master/Peepsy-firmware/Peepsy-firmware.ino:82
+}
+
+// ----------------------------------------------------------------------------------------
+void loop() {
+	bool Sense = ACSR>>ACO & 1;
+	if (Sense) Beep(); else NoBeep();
+ 2c4:	45 9b       	sbis	0x08, 5	; 8
+ 2c6:	36 c0       	rjmp	.+108    	; 0x334 <__stack+0xd5>
+Beep():
+/home/dusjagr/Documents/SGMK/peepsy-master/Peepsy-firmware/Peepsy-firmware.ino:37
+	Time = millis();
+}
+
+// ----------------------------------------------------------------------------------------
+void Beep () {
+	TCCR1 = TCCR1 | 3;											// Counter = clock/4
+ 2c8:	80 b7       	in	r24, 0x30	; 48
+ 2ca:	83 60       	ori	r24, 0x03	; 3
+ 2cc:	80 bf       	out	0x30, r24	; 48
+/home/dusjagr/Documents/SGMK/peepsy-master/Peepsy-firmware/Peepsy-firmware.ino:38
+	digitalWrite(Pin_Led_Sense, HIGH);
+ 2ce:	61 e0       	ldi	r22, 0x01	; 1
+NoBeep():
+/home/dusjagr/Documents/SGMK/peepsy-master/Peepsy-firmware/Peepsy-firmware.ino:44
+} 
+
+// ----------------------------------------------------------------------------------------
+void NoBeep () {
+	TCCR1 = TCCR1 & ~3;											// Counter stopped
+	digitalWrite(Pin_Led_Sense, LOW);
+ 2d0:	82 e0       	ldi	r24, 0x02	; 2
+ 2d2:	c5 de       	rcall	.-630    	; 0x5e <digitalWrite>
+millis():
+/home/dusjagr/.arduino15/packages/ATTinyCore/hardware/avr/1.5.2/cores/tiny/wiring.c:341
+  }
+
+  unsigned long millis()
+  {
+    unsigned long m;
+    uint8_t oldSREG = SREG;
+ 2d4:	2f b7       	in	r18, 0x3f	; 63
+/home/dusjagr/.arduino15/packages/ATTinyCore/hardware/avr/1.5.2/cores/tiny/wiring.c:345
+
+    // disable interrupts while we read millis_timer_millis or we might get an
+    // inconsistent value (e.g. in the middle of a write to millis_timer_millis)
+    cli();
+ 2d6:	f8 94       	cli
+/home/dusjagr/.arduino15/packages/ATTinyCore/hardware/avr/1.5.2/cores/tiny/wiring.c:346
+    m = millis_timer_millis;
+ 2d8:	80 91 69 00 	lds	r24, 0x0069	; 0x800069 <millis_timer_millis>
+ 2dc:	90 91 6a 00 	lds	r25, 0x006A	; 0x80006a <millis_timer_millis+0x1>
+ 2e0:	a0 91 6b 00 	lds	r26, 0x006B	; 0x80006b <millis_timer_millis+0x2>
+ 2e4:	b0 91 6c 00 	lds	r27, 0x006C	; 0x80006c <millis_timer_millis+0x3>
+/home/dusjagr/.arduino15/packages/ATTinyCore/hardware/avr/1.5.2/cores/tiny/wiring.c:347
+    SREG = oldSREG;
+ 2e8:	2f bf       	out	0x3f, r18	; 63
+loop():
+/home/dusjagr/Documents/SGMK/peepsy-master/Peepsy-firmware/Peepsy-firmware.ino:85
+void loop() {
+	bool Sense = ACSR>>ACO & 1;
+	if (Sense) Beep(); else NoBeep();
+	
+	// Go to sleep?
+	if (millis() - Time > Timeout) {
+ 2ea:	40 91 60 00 	lds	r20, 0x0060	; 0x800060 <__DATA_REGION_ORIGIN__>
+ 2ee:	50 91 61 00 	lds	r21, 0x0061	; 0x800061 <__DATA_REGION_ORIGIN__+0x1>
+ 2f2:	60 91 62 00 	lds	r22, 0x0062	; 0x800062 <__DATA_REGION_ORIGIN__+0x2>
+ 2f6:	70 91 63 00 	lds	r23, 0x0063	; 0x800063 <__DATA_REGION_ORIGIN__+0x3>
+ 2fa:	84 1b       	sub	r24, r20
+ 2fc:	95 0b       	sbc	r25, r21
+ 2fe:	a6 0b       	sbc	r26, r22
+ 300:	b7 0b       	sbc	r27, r23
+ 302:	81 36       	cpi	r24, 0x61	; 97
+ 304:	9a 4e       	sbci	r25, 0xEA	; 234
+ 306:	a1 05       	cpc	r26, r1
+ 308:	b1 05       	cpc	r27, r1
+ 30a:	e0 f2       	brcs	.-72     	; 0x2c4 <__stack+0x65>
+/home/dusjagr/Documents/SGMK/peepsy-master/Peepsy-firmware/Peepsy-firmware.ino:86
+		digitalWrite(Pin_Led_Sense, LOW);
+ 30c:	60 e0       	ldi	r22, 0x00	; 0
+ 30e:	82 e0       	ldi	r24, 0x02	; 2
+ 310:	a6 de       	rcall	.-692    	; 0x5e <digitalWrite>
+/home/dusjagr/Documents/SGMK/peepsy-master/Peepsy-firmware/Peepsy-firmware.ino:87
+		digitalWrite(Pin_Led_Wake, 	LOW);
+ 312:	60 e0       	ldi	r22, 0x00	; 0
+ 314:	85 e0       	ldi	r24, 0x05	; 5
+ 316:	a3 de       	rcall	.-698    	; 0x5e <digitalWrite>
+/home/dusjagr/Documents/SGMK/peepsy-master/Peepsy-firmware/Peepsy-firmware.ino:88
+		pinMode(Pin_Reference, 		INPUT);								// Turn off pullup to save power
+ 318:	60 e0       	ldi	r22, 0x00	; 0
+ 31a:	80 e0       	ldi	r24, 0x00	; 0
+ 31c:	dc de       	rcall	.-584    	; 0xd6 <pinMode>
+/home/dusjagr/Documents/SGMK/peepsy-master/Peepsy-firmware/Peepsy-firmware.ino:89
+		sleep_enable();
+ 31e:	85 b7       	in	r24, 0x35	; 53
+ 320:	80 62       	ori	r24, 0x20	; 32
+ 322:	85 bf       	out	0x35, r24	; 53
+/home/dusjagr/Documents/SGMK/peepsy-master/Peepsy-firmware/Peepsy-firmware.ino:90
+		sleep_cpu();
+ 324:	88 95       	sleep
+/home/dusjagr/Documents/SGMK/peepsy-master/Peepsy-firmware/Peepsy-firmware.ino:92
+		// Carry on here when we wake up
+		pinMode(Pin_Reference, INPUT_PULLUP);
+ 326:	62 e0       	ldi	r22, 0x02	; 2
+ 328:	80 e0       	ldi	r24, 0x00	; 0
+ 32a:	d5 de       	rcall	.-598    	; 0xd6 <pinMode>
+/home/dusjagr/Documents/SGMK/peepsy-master/Peepsy-firmware/Peepsy-firmware.ino:93
+		digitalWrite(Pin_Led_Wake, 	HIGH);
+ 32c:	61 e0       	ldi	r22, 0x01	; 1
+ 32e:	85 e0       	ldi	r24, 0x05	; 5
+ 330:	96 de       	rcall	.-724    	; 0x5e <digitalWrite>
+ 332:	c8 cf       	rjmp	.-112    	; 0x2c4 <__stack+0x65>
+NoBeep():
+/home/dusjagr/Documents/SGMK/peepsy-master/Peepsy-firmware/Peepsy-firmware.ino:43
+	digitalWrite(Pin_Led_Sense, HIGH);
+} 
+
+// ----------------------------------------------------------------------------------------
+void NoBeep () {
+	TCCR1 = TCCR1 & ~3;											// Counter stopped
+ 334:	80 b7       	in	r24, 0x30	; 48
+ 336:	8c 7f       	andi	r24, 0xFC	; 252
+ 338:	80 bf       	out	0x30, r24	; 48
+/home/dusjagr/Documents/SGMK/peepsy-master/Peepsy-firmware/Peepsy-firmware.ino:44
+	digitalWrite(Pin_Led_Sense, LOW);
+ 33a:	60 e0       	ldi	r22, 0x00	; 0
+ 33c:	c9 cf       	rjmp	.-110    	; 0x2d0 <__stack+0x71>
+
+0000033e <_exit>:
+exit():
+/home/jenkins/workspace/avr-gcc-staging/label/debian7-x86_64/gcc-build/avr/avr25/libgcc/../../../../gcc/libgcc/config/avr/lib1funcs.S:2278
+ 33e:	f8 94       	cli
+
+00000340 <__stop_program>:
+__stop_program():
+/home/jenkins/workspace/avr-gcc-staging/label/debian7-x86_64/gcc-build/avr/avr25/libgcc/../../../../gcc/libgcc/config/avr/lib1funcs.S:2280
+ 340:	ff cf       	rjmp	.-2      	; 0x340 <__stop_program>
