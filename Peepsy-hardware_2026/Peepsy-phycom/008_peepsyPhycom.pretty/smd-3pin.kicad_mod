@@ -1,0 +1,87 @@
+(footprint "smd-3pin"
+	(version 20241229)
+	(generator "pcbnew")
+	(generator_version "9.0")
+	(layer "F.Cu")
+	(property "Reference" "REF**"
+		(at 2.921 -1.905 180)
+		(layer "F.Fab")
+		(uuid "f608fbc4-7548-4ed8-8fc9-02eb1c1f1b0f")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Value" "Conn_01x03_Pin"
+		(at 0 -0.5 180)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "3a668a47-ad5f-463d-a76e-805a8f568535")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Datasheet" "~"
+		(at 0 0 180)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "910712b2-b306-494e-a555-410d79fb0238")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Description" "Generic connector, single row, 01x03, script generated (kicad-library-utils/schlib/autogen/connector/)"
+		(at 0 0 180)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "26d2d2f1-d608-42d6-9298-01a8aaf13383")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.15)
+			)
+		)
+	)
+	(attr smd)
+	(fp_rect
+		(start -1.75 -3.5)
+		(end 1.75 3.5)
+		(stroke
+			(width 0.12)
+			(type default)
+		)
+		(fill no)
+		(layer "F.CrtYd")
+		(uuid "e20e3a4a-8946-4294-bb17-5d58443c5be8")
+	)
+	(pad "1" smd roundrect
+		(at 0 -2.54)
+		(size 3 1.65)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(roundrect_rratio 0.25)
+		(uuid "dfcfb24d-0d2a-4931-ace2-a44733ba7e04")
+	)
+	(pad "2" smd roundrect
+		(at 0 0)
+		(size 3 1.65)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(roundrect_rratio 0.25)
+		(uuid "d2db1199-d671-429e-bc71-002b9be00088")
+	)
+	(pad "3" smd roundrect
+		(at 0 2.54)
+		(size 3 1.65)
+		(layers "F.Cu" "F.Mask" "F.Paste")
+		(roundrect_rratio 0.25)
+		(uuid "44a28d38-e6c3-490b-9290-199d9cf765f3")
+	)
+	(embedded_fonts no)
+)

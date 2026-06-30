@@ -1,0 +1,129 @@
+(footprint "PeepsyPad_noGND"
+	(version 20241229)
+	(generator "pcbnew")
+	(generator_version "9.0")
+	(layer "F.Cu")
+	(descr "THT pad as test Point, diameter 4.0mm, hole diameter 2.0mm")
+	(tags "test point THT pad")
+	(property "Reference" "REF**"
+		(at 0 -2.898 0)
+		(layer "F.SilkS")
+		(hide yes)
+		(uuid "b635a4d5-acba-41a9-bd2b-5e481272b07d")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Value" "Probe"
+		(at 0 3.1 0)
+		(layer "F.Fab")
+		(uuid "abd67153-2072-410b-abc1-28d799784a21")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Datasheet" "~"
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "16f5b5f8-e7e0-4124-a3f0-31b18afa9f0b")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Description" ""
+		(at 0 0 0)
+		(layer "F.Fab")
+		(hide yes)
+		(uuid "a881273a-fe81-40ce-bf74-0bc4be0720bd")
+		(effects
+			(font
+				(size 1.27 1.27)
+				(thickness 0.15)
+			)
+		)
+	)
+	(attr exclude_from_pos_files)
+	(fp_circle
+		(center 0 0)
+		(end 2.5 0)
+		(stroke
+			(width 0.05)
+			(type solid)
+		)
+		(fill no)
+		(layer "F.CrtYd")
+		(uuid "f75d830e-fa87-4f24-b03e-8d4deefde0ba")
+	)
+	(fp_text user "${REFERENCE}"
+		(at 0 -2.9 0)
+		(layer "F.Fab")
+		(uuid "8b434621-ceb3-463b-8c61-f3b8bde161c1")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(pad "1" thru_hole oval
+		(at 0 0)
+		(size 3.2 8)
+		(drill 2
+			(offset 0 2.4)
+		)
+		(layers "*.Cu" "*.Mask")
+		(remove_unused_layers no)
+		(uuid "19379cf1-c07f-4f8e-bae0-d4ee2b120019")
+	)
+	(pad "1" thru_hole oval
+		(at 0 7.62 90)
+		(size 8 12)
+		(drill oval 3 8)
+		(layers "*.Cu" "*.Mask")
+		(remove_unused_layers no)
+		(uuid "6f7d475a-0cd3-40a5-89c4-e3ad9113125b")
+	)
+	(zone
+		(net 0)
+		(net_name "")
+		(layer "F.Cu")
+		(uuid "96c53506-7231-4494-b591-f92e55de4649")
+		(hatch edge 0.5)
+		(connect_pads
+			(clearance 0)
+		)
+		(min_thickness 0.25)
+		(filled_areas_thickness no)
+		(keepout
+			(tracks allowed)
+			(vias allowed)
+			(pads allowed)
+			(copperpour not_allowed)
+			(footprints allowed)
+		)
+		(placement
+			(enabled no)
+			(sheetname "")
+		)
+		(fill
+			(thermal_gap 0.5)
+			(thermal_bridge_width 0.5)
+		)
+		(polygon
+			(pts
+				(xy 8.128 7.366) (xy 8.128 11.176) (xy 0.635 11.176) (xy -8.001 11.176) (xy -8.001 7.366)
+			)
+		)
+	)
+	(embedded_fonts no)
+)
